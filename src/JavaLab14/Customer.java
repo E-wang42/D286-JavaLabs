@@ -7,7 +7,7 @@ public class Customer {
     private String name;
 
     //TODO: Create a Grocery ArrayList
-    private ArrayList<Grocery> groceryList = new ArrayList<>();
+    private ArrayList<Grocery> groceryList = new ArrayList<Grocery>();
 
     //TODO: Define getGroceryList() method that returns Grocery ArrayList
     public ArrayList<Grocery> getGroceryList() {
@@ -34,6 +34,4 @@ public class Customer {
     public void setName(String name) {
         this.name = name;
     }
-
-
 }
