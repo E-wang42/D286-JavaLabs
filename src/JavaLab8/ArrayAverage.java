@@ -1,36 +1,23 @@
 package JavaLab8;
 
-import java.text.DecimalFormat;
 import java.util.*;
 
 public class ArrayAverage {
-    static double sumArray(double[] arr) {
-        double sum = 0.0;
-        for (double num : arr) {
-            sum += num;
-        }
-        return sum;
-    }
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        double[] inputs = new double[3];
-        inputs[0] = scanner.nextDouble();
-        inputs[1] = scanner.nextDouble();
-        inputs[2] = scanner.nextDouble();
+        /* Type your code here. */
+        double[] items = new double[3];
         double sum = 0.0;
-        double average = 0.0;
-        DecimalFormat df = new DecimalFormat("#.#");
-        for (double num : inputs) {
-            sum = sum + num;
-            if(sum > 0){
-                average = sum / 3;
-            }
+        double avg = 0.0;
+
+        for (int i = 0; i < 3; i++) {
+            items[i] = scanner.nextDouble();
+            sum += items[i];
         }
-        String arrayItems = Arrays.toString(inputs);
-        System.out.println(arrayItems);
-//        System.out.println("Array items: ");
-        System.out.println("Average: " + df.format(average));
-        scanner.close();
+
+        avg = sum / 3;
+
+        System.out.println("Array items: " + items[0] + " " + items[1] + " " + items[2]);
+        System.out.println("Average: " + avg);
     }
 }
